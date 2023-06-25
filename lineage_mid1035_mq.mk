@@ -26,7 +26,7 @@ $(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
 ## Device identifier, this must come after all inclusions
 PRODUCT_DEVICE := mid1035_mq
-PRODUCT_NAME := lineage-mid1035_mq
+PRODUCT_NAME := lineage_mid1035_mq
 PRODUCT_BRAND := onn
 PRODUCT_MODEL := 100003562
 PRODUCT_MANUFACTURER := onn
