@@ -14,8 +14,4 @@
 # limitations under the License.
 #
 
-# Inherit proprietary files
-#$(call inherit-product, vendor/onn/mid1035_mq/mid1035_mq-vendor.mk)
-
-# Setup dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+LOCAL_PATH := device/onn/mid1035_mq
