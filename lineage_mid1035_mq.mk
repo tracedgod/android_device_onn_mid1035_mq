@@ -22,16 +22,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/onn/mid1035_mq/device.mk)
 
 ## Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/lineage/config/common.mk)
 
 ## Device identifier, this must come after all inclusions
 PRODUCT_DEVICE := mid1035_mq
 PRODUCT_NAME := lineage_mid1035_mq
 PRODUCT_BRAND := onn
-PRODUCT_MODEL := 100003562
+PRODUCT_MODEL := mid1035_mq
 PRODUCT_MANUFACTURER := onn
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="vnd_mid1035a_mq-user 11 RP1A.200720.011 mp1V8137 release-keys"
 
-BUILD_FINGERPRINT := onn/100003562/mid1035_mq:11/RP1A.200720.011/qyh20210812:user/release-keys
+BUILD_FINGERPRINT := onn/mid1035_mq:11/RP1A.200720.011/qyh20210812:user/release-keys
