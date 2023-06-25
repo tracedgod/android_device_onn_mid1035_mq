@@ -16,6 +16,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter mid1035_mq, $(TARGET_DEVICE)),)
+ifeq ($(TARGET_DEVICE),mid1035_mq)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
