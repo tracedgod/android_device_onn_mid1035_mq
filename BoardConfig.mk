@@ -93,14 +93,12 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
-# TWRP Stuff
-ifeq ($(RECOVERY_VARIANT), twrp)
-TW_THEME := portrait_hdpi
+# TWRP 
+TW_THEME := landscape_hdpi
 TW_EXTRA_LANGUAGES := false
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
-endif
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
