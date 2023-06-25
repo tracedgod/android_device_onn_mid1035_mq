@@ -14,14 +14,8 @@
 # limitations under the License.
 #
 
-# Inherit from the common tree
-$(call inherit-product, device/samsung/gta4xl-common/common.mk)
-
 # Inherit proprietary files
 $(call inherit-product, vendor/onn/100003562/mid1035_mq-vendor.mk)
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
-
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
