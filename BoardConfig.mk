@@ -93,6 +93,11 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
+# TWRP Stuff
+ifeq ($(RECOVERY_VARIANT), twrp)
+TW_THEME := portrait_hdpi
+endif
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
