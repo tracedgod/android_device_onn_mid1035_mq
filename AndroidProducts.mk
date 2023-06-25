@@ -18,4 +18,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_mid1035_mq.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_mid1035_mq-userdebug
+    lineage_mid1035_mq-user \
+    lineage_mid1035_mq-userdebug \
+    lineage_mid1035_mq-eng

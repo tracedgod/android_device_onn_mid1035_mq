@@ -18,11 +18,12 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-## Inherit from device
-$(call inherit-product, device/onn/mid1035_mq/device.mk)
 
 ## Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common.mk)
+
+## Inherit from device
+$(call inherit-product, device/onn/mid1035_mq/device.mk)
 
 ## Device identifier, this must come after all inclusions
 PRODUCT_DEVICE := mid1035_mq
