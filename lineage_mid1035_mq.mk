@@ -20,7 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 
 ## Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 ## Inherit from device
 $(call inherit-product, device/onn/mid1035_mq/device.mk)

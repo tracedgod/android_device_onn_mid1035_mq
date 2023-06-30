@@ -15,3 +15,13 @@
 #
 
 LOCAL_PATH := device/onn/mid1035_mq
+
+# define hardware platform
+PRODUCT_PLATFORM := mt8768
+
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
