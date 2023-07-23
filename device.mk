@@ -6,3 +6,5 @@
 #
 
 LOCAL_PATH := device/onn/mid1035_mq
+
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
