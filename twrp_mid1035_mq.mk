@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020-2021 The LineageOS Project
+# Copyright (C) 2020 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,27 +14,29 @@
 # limitations under the License.
 #
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# Release name
+PRODUCT_RELEASE_NAME := mid1035_mq
 
+# Inherit from common AOSP config
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-## Inherit some common Lineage stuff
+# Inherit some common TWRP stuff.
+# For PitchBlack use vendor/pb/config/common.mk
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-## Inherit from device
+# Inherit device configuration
 $(call inherit-product, device/onn/mid1035_mq/device.mk)
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/onn/mid1035_mq/recovery/root,recovery/root)
+
 ## Device identifier, this must come after all inclusions
+PRODUCT_NAME := twrp_mid1035_mq
 PRODUCT_DEVICE := mid1035_mq
-PRODUCT_NAME := lineage_mid1035_mq
-PRODUCT_BRAND := onn
 PRODUCT_MODEL := mid1035_mq
+PRODUCT_BRAND := onn
 PRODUCT_MANUFACTURER := onn
-
-PRODUCT_GMS_CLIENTID_BASE := android-digiland
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="vnd_mid1035a_mq-user 11 RP1A.200720.011 mp1V8137 release-keys"
-
-BUILD_FINGERPRINT := onn/mid1035_mq:11/RP1A.200720.011/qyh20210812:user/release-keys
+PRODUCT_GMS_CLIENTID_BASE := android-onn
