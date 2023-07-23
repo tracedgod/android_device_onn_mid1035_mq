@@ -36,7 +36,7 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/onn/mid1035_mq/reco
 ## Device identifier, this must come after all inclusions
 PRODUCT_NAME := twrp_mid1035_mq
 PRODUCT_DEVICE := mid1035_mq
-PRODUCT_MODEL := mid1035_mq
+PRODUCT_MODEL := 100003562
 PRODUCT_BRAND := onn
 PRODUCT_MANUFACTURER := onn
-PRODUCT_GMS_CLIENTID_BASE := android-onn
+PRODUCT_GMS_CLIENTID_BASE := android-digiland
